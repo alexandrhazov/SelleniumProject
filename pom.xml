@@ -13,9 +13,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>18</maven.compiler.target>
         <maven.compiler.source>18</maven.compiler.source>
-        <junit.version>5.8.2</junit.version>
+        <junit.version>5.9.0</junit.version>
         <aspectj.version>1.9.9.1</aspectj.version>
-        <allure.version>2.17.3</allure.version>
+        <allure.version>2.18.1</allure.version>
     </properties>
 
     <dependencies>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.4.0</version>
+            <version>6.6.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -40,7 +40,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.22.0</version>
+            <version>3.23.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -58,7 +58,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.30</version>
+            <version>1.7.36</version>
             <scope>test</scope>
         </dependency>
 
@@ -84,7 +84,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>RELEASE</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
 
