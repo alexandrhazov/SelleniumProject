@@ -1,9 +1,10 @@
 package helpDesk;
 
+import com.example.seleniumtest.ConfigProvider;
 import core.BaseSeleniumPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class MainPage extends BaseSeleniumPage {
 
@@ -25,7 +26,26 @@ public class MainPage extends BaseSeleniumPage {
     @FindBy(xpath = "//table[@class='ui-datepicker-calendar']//a[text()='23']")
     private WebElement calendarField;
 
+    @FindBy(id = "id_submitter_email")
+    private WebElement email;
 
+    @FindBy(xpath = "//button[@type='submit']")
+    private WebElement submitButton;
 
+    public MainPage() {
+        driver.get(ConfigProvider.URL);
+        PageFactory.initElements(driver, this);
+    }
 
+    public MainPage createTicket(String titleValue, String bodyValue, String emailValue) {
+        queueList.click();
+        queueValue.click();
+        title.sendKeys(titleValue);
+        body.sendKeys(bodyValue);
+        dateField.click();
+        calendarField.click();
+        email.sendKeys(emailValue);
+        submitButton.click();
+        return this;
+    }
 }
